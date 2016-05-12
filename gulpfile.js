@@ -19,15 +19,15 @@ gulp.task('babel', function() {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
+  return gulp.src('sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('default', function() {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('src/**/*.js', ['babel']);
-  gulp.src('app')
+  gulp.src('.')
   .pipe(webserver({
     livereload: true,
     directoryListing: false,
