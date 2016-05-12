@@ -1,0 +1,96 @@
+.banner {
+  background-color: #ff9900;
+  height: 8rem;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.mainstyle {
+  font-family: Arial, Helvetica, Sans serif; 
+}
+.mainstyle a:link, .mainstyle a:active, .mainstyle a:visited {
+  color: #333333;
+  font-weight: bold;
+}
+.mainstyle a:hover {
+  color: #ff9900;
+}
+
+.nameheader {
+  color: #333333;
+  float: none;
+  font: 36px Arial, Helvetica, Sans serif; 
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+.nav {
+  font: 16px Arial, Helvetica, Sans serif;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav__link {
+  padding-bottom: 0.25rem;
+  width: 100%;
+}
+.nav__link a:link, a:active {
+  color: #000000;
+  text-decoration: none
+}
+.nav__link a:visited {
+  color:#333333; 
+  text-decoration: none
+}
+.nav__link a:hover {
+  text-decoration: underline
+}
+
+.position__date, .position__title, .education__note {
+  margin: 0.5rem 1rem;
+}
+
+.publication {
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 420px) {
+  .banner {
+    height: 9rem;
+  }
+  .nameheader {
+    float: left;
+    font-size: 56px;
+    margin: 0 0 0 2rem;
+    text-align: left
+  }
+  .nav {
+    font-size: 18px;
+    left: auto;
+    right: 0;
+    width: auto;
+  }
+  .nav__link {
+    float: left;
+    padding: 0 1rem;
+    width: auto;
+  }
+  .position__title{
+    width: 100%;
+  }
+}
+
+@media (min-width: 760px) {
+  .banner {
+    height: 12rem;
+  }
+  .nameheader {
+    font-size: 72px;
+  }
+  .nav {  
+    font-size: 32px;
+  }
+}
