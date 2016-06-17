@@ -24,10 +24,11 @@ h3 {
 .banner {
   background-color: $light-background;
   color: $cool-accent;
-  height: 8rem;
-  padding: 0;
-  position: relative;
-  width: 100%;
+  height: 8em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
 
   a, a:active, a:visited, a:hover, a:focus {
     color: $cool-accent;
@@ -36,7 +37,9 @@ h3 {
 
 .nameheader {
   float: none;
+  font-size: 2rem;
   margin: 0 auto;
+  padding-top: 1rem;
   text-align: center;
   width: 90%;
 }
@@ -52,7 +55,7 @@ h3 {
 }
 
 .content {
-  margin: 0 auto;
+  margin: 10em auto 0;
   width: 90%;
 }
 
@@ -72,6 +75,7 @@ h3 {
     float: left;
     font-size: 4rem;
     margin: 0;
+    padding-top: 0;
     text-align: left
   }
   .nav {
