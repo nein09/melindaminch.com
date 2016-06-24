@@ -11,3 +11,6 @@ a, a:active, a:visited, a:hover, a:focus {
 
 h3 {
   color: #34675c; }
+
+li {
+  list-style-type: none; }
