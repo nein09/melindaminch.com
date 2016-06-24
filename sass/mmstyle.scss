@@ -46,16 +46,23 @@ li {
 
 .portfolio-item {
   float: left;
-  height: 500px;
   width: 100%;
 
   @include breakpoint(medium) {
+    height: 350px;
     width: 50%;
   }
   @include breakpoint(large) {
+    height: 350px;
     width: 30%;
   }
   @include breakpoint(xlarge) {
+    height: 350px;
     width: 20%;
   }
+}
+
+.portfolio-item--image {
+  max-width: 100%;
+  height: auto;
 }
