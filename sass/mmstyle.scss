@@ -1,6 +1,6 @@
 /* Colors! */
 $text-color: #324851;
-$light-background: #7Da3A1;
+$light-background: #F5F4F0;
 $warm-accent: #86ac41;
 $cool-accent: #34675c;
 $bright-accent: #f9ba32;
@@ -25,6 +25,7 @@ $xlarge: 1024px;
 
 
 body {
+  background-color: $light-background;
   color: $text-color;
   font-family: Arial, Helvetica, Sans serif;
   font-size: 100%;
@@ -44,22 +45,25 @@ li {
   list-style-type: none;
 }
 
-.portfolio-item {
-  float: left;
-  width: 100%;
+.header {
+  background-image: url(../img/header.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 280px;
+  margin: 0 auto;
+}
 
-  @include breakpoint(medium) {
-    height: 350px;
-    width: 50%;
-  }
-  @include breakpoint(large) {
-    height: 350px;
-    width: 30%;
-  }
-  @include breakpoint(xlarge) {
-    height: 350px;
-    width: 20%;
-  }
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio li {
+  flex: 300px;
+}
+
+.portfolio-item {
+  margin: 20px;
 }
 
 .portfolio-item--image {
