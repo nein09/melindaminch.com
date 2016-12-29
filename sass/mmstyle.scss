@@ -1,12 +1,12 @@
 /* Colors! */
 $text-color: #324851;
 $light-background: #F5F4F0;
-$warm-accent: #86ac41;
-$cool-accent: #34675c;
+$dark-background: #828687;
+$warm-accent: #EA966A;
 $bright-accent: #f9ba32;
+$black: #000;
 
 /* Breakpoints! */
-
  @mixin breakpoint($point) {
    @if $point == medium {
      @media only screen and (min-width: 400px) and (max-width: 767px) { @content ; }
@@ -37,10 +37,6 @@ a, a:active, a:visited, a:hover, a:focus {
   text-decoration: none;
 }
 
-h3 {
-  color: $cool-accent;
-}
-
 li {
   list-style-type: none;
 }
@@ -56,6 +52,7 @@ li {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 .portfolio li {
