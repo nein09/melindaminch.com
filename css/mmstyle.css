@@ -3,7 +3,7 @@
 body {
   background-color: #F5F4F0;
   color: #324851;
-  font-family: Arial, Helvetica, Sans serif;
+  font-family: Helvetica, Arial, Sans serif;
   font-size: 100%; }
 
 a, a:active, a:visited, a:hover, a:focus {
@@ -25,21 +25,18 @@ li {
   margin: 0 auto;
 }
 
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio li {
+  flex: 300px;
+}
+
 .portfolio-item {
-  float: left;
-  width: 100%; }
-  @media only screen and (min-width: 400px) and (max-width: 767px) {
-    .portfolio-item {
-      height: 350px;
-      width: 50%; } }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .portfolio-item {
-      height: 350px;
-      width: 30%; } }
-  @media only screen and (min-width: 1024px) {
-    .portfolio-item {
-      height: 350px;
-      width: 20%; } }
+  margin: 20px;
+}
 
 .portfolio-item--image {
   max-width: 100%;
