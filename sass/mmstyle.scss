@@ -19,10 +19,6 @@ $black: #000;
   }
 }
 
-$medium: 400px 767px;
-$large: 768px 1023px;
-$xlarge: 1024px;
-
 
 body {
   background-color: $light-background;
@@ -41,12 +37,61 @@ li {
   list-style-type: none;
 }
 
+h1 {
+  font-size: 30px;
+  top: -25px;
+  left: 0;
+  position: absolute;
+  @include breakpoint(medium) {
+    font-size: 40px;
+    top: 0;
+    left: 10px;
+  }
+  @include breakpoint(large) {
+    font-size: 50px;
+    top: 50px;
+    left: 50px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 50px;
+    top: 50px;
+    left: 50px;
+  }
+}
+
 .header {
   background-image: url(../img/header.png);
   background-position: 50%;
   background-repeat: no-repeat;
-  height: 280px;
+  background-size: 100%;
+  height: 100px;
   margin: 0 auto;
+  position: relative;
+
+  @include breakpoint(medium) {
+    height: 200px;
+  }
+
+  @include breakpoint(large) {
+    background-size: auto;
+    height: 280px;
+  }
+
+  @include breakpoint(xlarge) {
+    background-size: auto;
+    height: 280px;
+  }
+}
+
+.intro {
+  background-color: $dark-background;
+  color: $black;
+  padding: 10px 20px;
+
+  a, a:active, a:visited, a:hover, a:focus {
+    color: $bright-accent;
+    font-weight: normal;
+  }
 }
 
 .portfolio {
