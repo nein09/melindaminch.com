@@ -1,3 +1,5 @@
 .DS_Store
 melindaminch.sublime-workspace
 melindaminch.sublime-project
+node_modules
+css/
