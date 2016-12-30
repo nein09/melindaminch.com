@@ -89,14 +89,7 @@ h1 {
 }
 
 .intro {
-  background-color: $dark-background;
-  color: $black;
   padding: 10px 20px;
-
-  a, a:active, a:visited, a:hover, a:focus {
-    color: $bright-accent;
-    font-weight: normal;
-  }
 }
 
 .portfolio {
