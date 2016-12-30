@@ -1,13 +1,34 @@
 /* Colors! */
 $text-color: #324851;
-$light-background: #7Da3A1;
-$warm-accent: #86ac41;
-$cool-accent: #34675c;
+$light-background: #F5F4F0;
+$dark-background: #828687;
+$warm-accent: #EA966A;
 $bright-accent: #f9ba32;
+$cool-accent: #86ac41;
+$black: #000;
+$white: #FFF;
+
+/* Fonts! */
+$body-font: 'Raleway', sans-serif;
+
+/* Breakpoints! */
+ @mixin breakpoint($point) {
+   @if $point == medium {
+     @media only screen and (min-width: 400px) and (max-width: 767px) { @content ; }
+  }
+   @else if $point == large {
+     @media only screen and (min-width: 768px) and (max-width: 1023px) { @content ; }
+  }
+    @else if $point == xlarge {
+     @media only screen and(min-width: 1024px) { @content ; }
+  }
+}
+
 
 body {
+  background-color: $light-background;
   color: $text-color;
-  font-family: Arial, Helvetica, Sans serif;
+  font-family: $body-font;
   font-size: 100%;
 }
 
@@ -17,93 +38,107 @@ a, a:active, a:visited, a:hover, a:focus {
   text-decoration: none;
 }
 
-h3 {
-  color: $cool-accent;
+li {
+  list-style-type: none;
 }
 
-.banner {
-  background-color: $light-background;
-  color: $cool-accent;
-  height: 8em;
-  position: absolute;
+h1 {
+  font-size: 30px;
+  top: -25px;
   left: 0;
-  right: 0;
-  top: 0;
+  position: absolute;
+  @include breakpoint(medium) {
+    font-size: 40px;
+    top: 0;
+    left: 10px;
+  }
+  @include breakpoint(large) {
+    font-size: 50px;
+    top: 50px;
+    left: 50px;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 50px;
+    top: 50px;
+    left: 50px;
+  }
+}
+
+.header {
+  background-image: url(../img/header.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoint(medium) {
+    height: 200px;
+  }
+
+  @include breakpoint(large) {
+    background-size: auto;
+    height: 280px;
+  }
+
+  @include breakpoint(xlarge) {
+    background-size: auto;
+    height: 280px;
+  }
+}
+
+.intro {
+  background-color: $dark-background;
+  color: $black;
+  padding: 10px 20px;
 
   a, a:active, a:visited, a:hover, a:focus {
-    color: $cool-accent;
-    }
-}
-
-.nameheader {
-  float: none;
-  font-size: 2rem;
-  margin: 0 auto;
-  padding-top: 1rem;
-  text-align: center;
-  width: 90%;
-}
-.nav {
-  list-style-type: none;
-  position: absolute;
-  bottom: 0;
-}
-
-.nav__link {
-  padding-bottom: 0.25rem;
-  width: 100%;
-}
-
-.content {
-  margin: 10em auto 0;
-  width: 90%;
-}
-
-.position__date, .position__title, .education__note {
-  margin: 0.5rem 1rem;
-}
-
-.publication {
-  padding-bottom: 0.5rem;
-}
-
-@media (min-width: 420px) {
-  .banner {
-    height: 9rem;
-  }
-  .nameheader {
-    float: left;
-    font-size: 4rem;
-    margin: 0;
-    padding-top: 0;
-    text-align: left
-  }
-  .nav {
-    left: auto;
-    right: 0;
-    width: auto;
-  }
-  .nav__link {
-    float: left;
-    padding: 0 1rem;
-    width: auto;
-  }
-  .position__title{
-    width: 100%;
+    color: $bright-accent;
+    font-weight: normal;
   }
 }
 
-@media (min-width: 760px) {
-  .banner {
-    height: 12rem;
-  }
-  .content {
-    margin-top: 13rem;
-  }
-  .nameheader {
-    font-size: 5rem;
-  }
-  .nav {
-    font-size: 2rem;
-  }
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.portfolio li {
+  flex: 300px;
+  margin: 10px;
+}
+
+.portfolio-item {
+  border: 1px solid $black;
+  background-color: $white;
+  padding: 10px;
+}
+
+.portfolio-item__site {
+  border-color: $dark-background;
+}
+
+.portfolio-item__software {
+  border-color: $bright-accent;
+}
+
+.portfolio-item__publication {
+  border-color: $warm-accent;
+}
+
+.portfolio-item__talk {
+  border-color: $cool-accent;
+}
+
+.portfolio-item--title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.portfolio-item--image {
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
 }
