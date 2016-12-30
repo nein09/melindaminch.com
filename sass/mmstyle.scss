@@ -19,6 +19,9 @@ $body-font: 'Raleway', sans-serif;
    @else if $point == large {
      @media only screen and (min-width: 768px) and (max-width: 1023px) { @content ; }
   }
+  @else if $point == large-and-up {
+     @media only screen and (min-width: 768px) { @content ; }
+  }
     @else if $point == xlarge {
      @media only screen and(min-width: 1024px) { @content ; }
   }
@@ -52,12 +55,7 @@ h1 {
     top: 0;
     left: 10px;
   }
-  @include breakpoint(large) {
-    font-size: 50px;
-    top: 50px;
-    left: 50px;
-  }
-  @include breakpoint(xlarge) {
+  @include breakpoint(large-and-up) {
     font-size: 50px;
     top: 50px;
     left: 50px;
@@ -77,12 +75,7 @@ h1 {
     height: 200px;
   }
 
-  @include breakpoint(large) {
-    background-size: auto;
-    height: 280px;
-  }
-
-  @include breakpoint(xlarge) {
+  @include breakpoint(large-and-up) {
     background-size: auto;
     height: 280px;
   }
@@ -90,6 +83,10 @@ h1 {
 
 .intro {
   padding: 10px 20px;
+
+  @include breakpoint(large-and-up) {
+    padding-left: 50px;
+  }
 }
 
 .portfolio {
