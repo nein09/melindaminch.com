@@ -5,6 +5,7 @@ $dark-background: #828687;
 $warm-accent: #EA966A;
 $bright-accent: #f9ba32;
 $cool-accent: #86ac41;
+$link-color: #415421;
 $black: #000;
 $white: #FFF;
 
@@ -36,7 +37,7 @@ body {
 }
 
 a, a:active, a:visited, a:hover, a:focus {
-  color: $warm-accent;
+  color: $link-color;
   font-weight: bold;
   text-decoration: none;
 }
@@ -60,6 +61,10 @@ h1 {
     top: 50px;
     left: 50px;
   }
+}
+
+h2 {
+  margin: 0.25em 0;
 }
 
 .header {
