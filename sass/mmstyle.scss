@@ -96,8 +96,13 @@ h2 {
 
 .portfolio {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 0;
+
+  @include breakpoint(large-and-up) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio li {
