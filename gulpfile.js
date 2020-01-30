@@ -9,7 +9,7 @@ var webserver = require("gulp-connect");
 
 gulp.task("babel", function() {
   return gulp
-    .src("src/**/*.js")
+    .src("./src/**/*.js")
     .pipe(sourcemaps.init())
     .pipe(
       babel({
@@ -23,14 +23,14 @@ gulp.task("babel", function() {
 
 gulp.task("sass", function() {
   return gulp
-    .src("sass/**/*.scss")
+    .src("./sass/**/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("css"));
 });
 
 gulp.task("webserver", function() {
   webserver.server({
-    root: "app",
+    root: "./",
     livereload: true
   });
 });

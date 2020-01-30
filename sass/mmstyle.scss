@@ -97,6 +97,7 @@ h2 {
 .portfolio {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 0;
 
   @include breakpoint(large-and-up) {
@@ -106,14 +107,14 @@ h2 {
 }
 
 .portfolio li {
-  flex: 300px;
+  flex: 0 1 300px;
   margin: 10px;
 }
 
 .portfolio-item {
   border: 1px solid $black;
   background-color: $white;
-  max-width: 450px;
+  max-width: 100%;
   padding: 10px;
 }
 
