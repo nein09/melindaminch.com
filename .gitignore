@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-# gulp build output
-css
+.parcel-cache/
+dist/
