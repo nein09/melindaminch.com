@@ -97,6 +97,10 @@ h2 {
   margin: 0 auto;
   position: relative;
 
+  @media (prefers-color-scheme: dark) {
+    background-image: url(../img/header-dark.png);
+  }
+
   @include breakpoint(medium) {
     background-position: center;
     height: 200px;
