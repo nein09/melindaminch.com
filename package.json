@@ -1,23 +1,19 @@
 {
     "name": "melindaminch-dot-com",
-    "version": "1.4.0",
-    "source":
-    [
+    "version": "1.4.1",
+    "source": [
         "index.html",
         "sass/mmstyle.scss"
     ],
-    "scripts":
-    {
+    "scripts": {
         "build": "parcel build",
         "watch": "parcel"
     },
-    "devDependencies":
-    {
-        "@parcel/transformer-sass": "^2.13.2",
-        "parcel": "^2.13.2"
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.16.1",
+        "parcel": "^2.16.1"
     },
-    "dependencies":
-    {
+    "dependencies": {
         "npm": "^11.6.2"
     }
 }

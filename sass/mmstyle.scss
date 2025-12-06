@@ -1,7 +1,7 @@
 /* Colors! */
 $text-color: #324851;
 $light-background: #F5F4F0;
-$dark-background: #828687;
+$dark-background: #4b4d4e;
 $warm-accent: #EA966A;
 $bright-accent: #f9ba32;
 $cool-accent: #86ac41;
@@ -34,12 +34,21 @@ body {
   color: $text-color;
   font-family: $body-font;
   font-size: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $text-color;
+    color: $light-background;
+  }
 }
 
 a, a:active, a:visited, a:hover, a:focus {
   color: $link-color;
   font-weight: bold;
   text-decoration: none;
+
+    @media (prefers-color-scheme: dark) {
+      color: $warm-accent;
+  }
 }
 
 li {
@@ -88,6 +97,10 @@ h2 {
   margin: 0 auto;
   position: relative;
 
+  @media (prefers-color-scheme: dark) {
+    background-image: url(../img/header-dark.png);
+  }
+
   @include breakpoint(medium) {
     background-position: center;
     height: 200px;
@@ -130,10 +143,17 @@ h2 {
   max-width: 100%;
   padding: 10px;
   text-align: center;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-background;
+  }
 }
 
 .portfolio-item__site {
   border-color: $dark-background;
+  @media (prefers-color-scheme: dark) {
+    border-color: $white;
+  }
 }
 
 .portfolio-item__software {
