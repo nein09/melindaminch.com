@@ -10,8 +10,8 @@
         "watch": "parcel"
     },
     "devDependencies": {
-        "@parcel/transformer-sass": "^2.16.1",
-        "parcel": "^2.16.1"
+        "@parcel/transformer-sass": "^2.16.4",
+        "parcel": "^2.16.4"
     },
     "dependencies": {
         "npm": "^11.6.2"
