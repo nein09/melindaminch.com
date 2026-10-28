@@ -1,27 +1,30 @@
 {
-    "name": "melindaminch-dot-com",
-    "version": "1.4.1",
-    "source": [
-        "index.html",
-        "sass/mmstyle.scss"
-    ],
-    "scripts": {
-        "build": "parcel build",
-        "watch": "parcel"
+    "allowScripts":
+    {
+        "@parcel/watcher@2.6.0": true,
+        "@swc/core@1.16.20": true,
+        "lmdb@2.8.5": true,
+        "msgpackr-extract@3.0.4": true
     },
-    "devDependencies": {
+    "dependencies":
+    {
+        "npm": "^11.21.1"
+    },
+    "devDependencies":
+    {
         "@parcel/transformer-sass": "^2.16.4",
         "parcel": "^2.16.4"
     },
-    "dependencies": {
-
-    "allowScripts": {
-        "lmdb@2.8.5": true,
-        "@parcel/watcher@2.6.0": true,
-        "@swc/core@1.16.20": true,
-        "msgpackr-extract@3.0.4": true
-
-        "npm": "^11.17.0"
-
-    }
+    "name": "melindaminch-dot-com",
+    "scripts":
+    {
+        "build": "parcel build",
+        "watch": "parcel"
+    },
+    "source":
+    [
+        "index.html",
+        "sass/mmstyle.scss"
+    ],
+    "version": "1.4.1"
 }
