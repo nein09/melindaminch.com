@@ -15,5 +15,11 @@
     },
     "dependencies": {
         "npm": "^11.12.1"
+    },
+    "allowScripts": {
+        "lmdb@2.8.5": true,
+        "@parcel/watcher@2.6.0": true,
+        "@swc/core@1.16.20": true,
+        "msgpackr-extract@3.0.4": true
     }
 }
