@@ -1,28 +1,23 @@
 {
-    "allowScripts":
-    {
+    "allowScripts": {
         "@parcel/watcher@2.6.0": true,
-        "@swc/core@1.16.20": true,
         "lmdb@2.8.5": true,
-        "msgpackr-extract@3.0.4": true
+        "@swc/core@1.16.22": true,
+        "msgpackr-extract@3.0.7": true
     },
-    "dependencies":
-    {
-        "npm": "^11.21.1"
+    "dependencies": {
+        "npm": "^9.6.2"
     },
-    "devDependencies":
-    {
+    "devDependencies": {
         "@parcel/transformer-sass": "^2.16.4",
         "parcel": "^2.16.4"
     },
     "name": "melindaminch-dot-com",
-    "scripts":
-    {
+    "scripts": {
         "build": "parcel build",
         "watch": "parcel"
     },
-    "source":
-    [
+    "source": [
         "index.html",
         "sass/mmstyle.scss"
     ],
